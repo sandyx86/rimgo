@@ -9,6 +9,7 @@ import (
 	"log"
 	"math/rand"
 	"os"
+	"time"
 )
 
 func Gen(n int) uint8 {
@@ -16,6 +17,7 @@ func Gen(n int) uint8 {
 }
 
 func main() {
+	rand.Seed(time.Now().UnixNano())
 	img := image.NewRGBA(image.Rect(0,0,200,200))
 	for x := 0; x < 200; x++ {
 		for y := 0; y < 200; y++ {
